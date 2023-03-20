@@ -1,7 +1,6 @@
-import { BoxInput, Name, Input } from "./style"
+import { BoxInput } from "./style"
 
 const AuthInput = ( infos ) => {
-  console.log(infos)
   const { width, height, paddingLeft, borderRadius, border } = infos.styleInfos
   const { name, placeholder, type } = infos.inputInfos
 
@@ -15,8 +14,8 @@ const AuthInput = ( infos ) => {
   
   return (
     <BoxInput>
-      <Name className="textNameInput">{name}</Name>
-      <Input style={styleInput} placeholder={placeholder} type={type}></Input>
+      <p className="textNameInput">{name}</p>
+      <input style={styleInput} placeholder={placeholder} type={type}></input>
     </BoxInput>
   )
 }

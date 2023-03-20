@@ -5,7 +5,7 @@ import InputsBox from "./inputsBox"
 export default function SignIn() {
   
   return (
-    <AuthLayout background={"#E5E5E5"}>
+    <AuthLayout background={"#ffffff"}>
       <InputsBox />
     </AuthLayout>
   )

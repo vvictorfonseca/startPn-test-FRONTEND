@@ -1,12 +1,5 @@
-import AuthLayout from "../../layouts/Auth"
-
-import InputsBox from "./inputsBox"
-
-export default function SignIn() {
-  
+export default function SignUp() {
   return (
-    <AuthLayout background={"#ffffff"}>
-      <InputsBox />
-    </AuthLayout>
+    <p>Sign-Up</p>
   )
 }

@@ -4,3 +4,52 @@
   font-size: 14px;
   color: #000;
 }
+
+.textAuthName {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 24px;
+  color: #476EE6;
+}
+
+.textPrivaceTerms {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000;
+}
+
+.textConfirmPrivaceTerms {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 13px;
+  color: #000;
+}
+
+.textLinkPrivaceTerms {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 14px;
+  color: #476EE6;
+}
+
+.textButton {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+}
+
+.textAuthQuestion {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 15px;
+  color: rgba(60, 60, 67, 0.72);
+}
+
+.textAuthNavigate {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 15px;
+  color: #476EE6;
+}

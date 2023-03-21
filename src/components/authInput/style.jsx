@@ -5,13 +5,7 @@ export const BoxInput = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 290px;
-  height: 78px;
-  margin-bottom: 26.6px;
+  height: 70px;
+  margin-bottom: 20px;
   //background-color: red;
-`
-export const Name = styled.p`
-
-`
-export const Input = styled.input`
-  
 `

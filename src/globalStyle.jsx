@@ -131,8 +131,14 @@ table {
 * {
     box-sizing: border-box;
 }
+
+a {
+  text-decoration: none
+}
+
 body {
     background-color: #333333;
+    font-family: 'Poppins', sans-serif;
 }
 `
 

@@ -6,7 +6,7 @@ const InputsBox = () => {
 
   const generalInputInfo = {
     width: "290px",
-    height: "50px",
+    height: "45px",
     borderRadius: "10px",
     border: "1px solid #D7D7D7",
     paddingLeft: "10.32px",

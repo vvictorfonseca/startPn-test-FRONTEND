@@ -2,7 +2,7 @@ import Button from "../../../components/Button"
 
 const LoginColumn = ({ infos }) => {
   const { containerWidth, height, display, justifyContent, containerJustifyContent, 
-          alignItems, width, content, border, borderRadius, marginTop, cursor,
+          alignItems, width, content, border, borderRadius, cursor,
           backgroundColor, pContent, margin} = infos
 
   const styleContainer = {

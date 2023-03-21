@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 import AuthLayout from "../../layouts/Auth"
 
@@ -11,11 +12,23 @@ import AuthNavigation from "../../components/AuthNavigation"
 
 import logoImg from "../../images/png/logo.png"
 
+import postSignUp from "../../services/api"
+
 const SignUp = () => {
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
-  console.log("fullName", fullName)
-  console.log("email", email)
+  const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
+
+  const navigate = useNavigate()
+
+  const signUpBody = {
+    fullName: fullName,
+    email: email,
+    password: password,
+    confirmPassword: confirmPassword,
+    navigate: navigate
+  }
 
   const logoinfos = {
     width: "190px",
@@ -29,6 +42,23 @@ const SignUp = () => {
     marginLeft: "49px",
     marginTop: "35px",
     name: "Cadastro"
+  }
+
+  const inputBoxInfos = {
+    width: "87%",
+    margin: "27px auto 0px auto",
+    maxHeight: "29%",
+    display: "flex",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    fullName: fullName,
+    setFullName: setFullName,
+    email: email,
+    setEmail: setEmail,
+    password: password,
+    setPassword: setPassword,
+    confirmPassword: confirmPassword,
+    setConfirmPassword: setConfirmPassword
   }
 
   const privaceTermsInfos = {
@@ -63,7 +93,8 @@ const SignUp = () => {
     backgroundColor: "#476EE6",
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    onclick: () => postSignUp(signUpBody)
   }
 
   const authNavigationInfos = {
@@ -75,19 +106,6 @@ const SignUp = () => {
     pContent: "Login",
     cursor: "pointer",
     navigate: "/"
-  }
-
-  const inputBoxInfos = {
-    width: "87%",
-    margin: "27px auto 0px auto",
-    maxHeight: "29%",
-    display: "flex",
-    justifyContent: "space-between",
-    flexWrap: "wrap",
-    fullName: fullName,
-    setFullName: setFullName,
-    email: email,
-    setEmail: setEmail
   }
 
   return (

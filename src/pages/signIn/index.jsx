@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import AuthLayout from "../../layouts/Auth"
 
 import logoImg from "../../images/png/logo.png"
@@ -9,6 +11,15 @@ import LoginColumn from "./loginColumn"
 import AuthNavigation from "../../components/AuthNavigation"
 
 const SignIn = () => {
+  const [emailLogin, setEmailLogin] = useState("")
+  const [passwordLogin, setPasswordLogin] = useState("")
+
+  const signInBody = {
+    email: emailLogin,
+    password: passwordLogin
+  }
+
+  console.log(signInBody)
   
   const logoinfos = {
     width: "190px",
@@ -31,6 +42,10 @@ const SignIn = () => {
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
+    emailLogin: emailLogin,
+    setEmailLogin: setEmailLogin,
+    passwordLogin: passwordLogin,
+    setPasswordLogin: setPasswordLogin
   }
 
   const loginColumnInfos = {

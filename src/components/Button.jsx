@@ -1,6 +1,6 @@
 const Button = ({ infos }) => {
   const { margin, width, height, backgroundColor, borderRadius, cursor, content, border, display, 
-          alignItems, marginTop, justifyContent } = infos
+          alignItems, marginTop, justifyContent, onclick } = infos
 
   const styleButton = {
     display,
@@ -17,7 +17,7 @@ const Button = ({ infos }) => {
   }
 
   return (
-    <button className="textButton" style={styleButton}>{content}</button>
+    <button onClick={onclick} className="textButton" style={styleButton}>{content}</button>
   )
 }
 

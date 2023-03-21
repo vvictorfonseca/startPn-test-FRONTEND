@@ -2,7 +2,7 @@ import AuthInput from "../../../components/AuthInput"
 
 const InputsBox = ( { infos } ) => {
   const { width, margin, maxHeight, display, justifyContent, flexWrap, fullName, setFullName,
-          email, setEmail} = infos
+          email, setEmail, password, setPassword, confirmPassword, setConfirmPassword } = infos
   
   const styleContainer = {
     width,
@@ -43,13 +43,17 @@ const InputsBox = ( { infos } ) => {
   const input3 = {
     name: "Senha",
     placeholder: "Insira sua senha",
-    type: "password"
+    type: "password",
+    value: password,
+    setValue: setPassword
   }
 
   const input4 = {
     name: "Confirme sua Senha",
     placeholder: "Confirma senha",
-    type: "password"
+    type: "password",
+    value: confirmPassword,
+    setValue: setConfirmPassword
   }
   
   return (

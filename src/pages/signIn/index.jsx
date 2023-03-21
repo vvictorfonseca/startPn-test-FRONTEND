@@ -20,8 +20,8 @@ const SignIn = () => {
   const [emailLogin, setEmailLogin] = useState("")
   const [passwordLogin, setPasswordLogin] = useState("")
 
-  const { userInfos, setUserInfos } = useContext(UserContext)
-  const { token, setToken } = useContext(TokenContext)
+  const { setUserInfos } = useContext(UserContext)
+  const { setToken } = useContext(TokenContext)
 
   const navigate = useNavigate()
 
@@ -33,8 +33,6 @@ const SignIn = () => {
     navigate
   }
 
-  //console.log(signInBody)
-  
   const logoinfos = {
     width: "190px",
     height: "47.7px",

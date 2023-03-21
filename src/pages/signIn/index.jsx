@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { useNavigate } from "react-router-dom"
 
 import AuthLayout from "../../layouts/Auth"
 
@@ -10,16 +11,29 @@ import InputsBox from "./inputsBox"
 import LoginColumn from "./loginColumn"
 import AuthNavigation from "../../components/AuthNavigation"
 
+import UserContext from "../../context/userContext"
+import TokenContext from "../../context/token"
+
+import { postSignIn } from "../../services/api"
+
 const SignIn = () => {
   const [emailLogin, setEmailLogin] = useState("")
   const [passwordLogin, setPasswordLogin] = useState("")
 
+  const { userInfos, setUserInfos } = useContext(UserContext)
+  const { token, setToken } = useContext(TokenContext)
+
+  const navigate = useNavigate()
+
   const signInBody = {
     email: emailLogin,
-    password: passwordLogin
+    password: passwordLogin,
+    setUserInfos: setUserInfos,
+    setToken: setToken,
+    navigate
   }
 
-  console.log(signInBody)
+  //console.log(signInBody)
   
   const logoinfos = {
     width: "190px",
@@ -62,7 +76,8 @@ const SignIn = () => {
     cursor: "pointer",
     backgroundColor: "#476EE6",
     pContent: "Esqueceu a senha?",
-    margin: "48px auto 0px auto"
+    margin: "48px auto 0px auto",
+    onclick: () => postSignIn(signInBody)
   }
 
   const authNavigationInfos = {

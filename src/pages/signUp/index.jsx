@@ -12,7 +12,7 @@ import AuthNavigation from "../../components/AuthNavigation"
 
 import logoImg from "../../images/png/logo.png"
 
-import postSignUp from "../../services/api"
+import { postSignUp } from "../../services/api"
 
 const SignUp = () => {
   const [fullName, setFullName] = useState("")

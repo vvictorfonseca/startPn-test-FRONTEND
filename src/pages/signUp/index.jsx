@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import AuthLayout from "../../layouts/Auth"
 
 import Logo from "../../components/Logo"
@@ -9,7 +11,11 @@ import AuthNavigation from "../../components/AuthNavigation"
 
 import logoImg from "../../images/png/logo.png"
 
-export default function SignIn() {
+const SignUp = () => {
+  const [fullName, setFullName] = useState("")
+  const [email, setEmail] = useState("")
+  console.log("fullName", fullName)
+  console.log("email", email)
 
   const logoinfos = {
     width: "190px",
@@ -55,7 +61,6 @@ export default function SignIn() {
     marginTop: "15px",
     cursor: "pointer",
     backgroundColor: "#476EE6",
-    contentWidth: "100%",
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
@@ -72,14 +77,29 @@ export default function SignIn() {
     navigate: "/"
   }
 
+  const inputBoxInfos = {
+    width: "87%",
+    margin: "27px auto 0px auto",
+    maxHeight: "29%",
+    display: "flex",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    fullName: fullName,
+    setFullName: setFullName,
+    email: email,
+    setEmail: setEmail
+  }
+
   return (
     <AuthLayout background={"#ffffff"}>
       <Logo infos={logoinfos} />
       <AuthName infos={authNameinfos} />
-      <InputsBox />
+      <InputsBox infos={inputBoxInfos} />
       <PrivaceTermsBox infos={privaceTermsInfos} />
       <Button infos={buttonInfos} />
       <AuthNavigation infos={authNavigationInfos} />
     </AuthLayout>
   )
 }
+
+export default SignUp
